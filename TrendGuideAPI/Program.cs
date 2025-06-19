@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(9, 0, 0)) // pas de versie aan op jouw MySQL-versie
+        new MySqlServerVersion(new Version(9, 0, 0))
 ));
 
 builder.Services.AddCors(options =>
